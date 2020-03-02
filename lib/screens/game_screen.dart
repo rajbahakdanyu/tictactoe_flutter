@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class GameScreen extends StatefulWidget {
-  static final id = 'game_screen';
+  final String matchType;
+
+  GameScreen({@required this.matchType});
 
   @override
   _GameScreenState createState() => _GameScreenState();

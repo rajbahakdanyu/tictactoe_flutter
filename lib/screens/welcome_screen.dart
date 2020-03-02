@@ -1,11 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:tictactoe/screens/selection_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  static final id = 'welcome_screen';
-
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
@@ -31,7 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, SelectionScreen.id);
+                  Navigator.pushNamed(context, '/select');
                 },
                 child: Text('Start'),
                 color: Colors.lightBlueAccent,

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tictactoe/screens/game_screen.dart';
 
 class SelectionScreen extends StatelessWidget {
-  static final id = 'selection_screen';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,14 +34,16 @@ class SelectionScreen extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, GameScreen.id);
+                  Navigator.pushNamed(context, '/game', arguments: 'player');
                 },
                 child: Text('VS P2'),
                 color: Colors.lightBlueAccent,
                 textColor: Colors.white,
               ),
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/game', arguments: 'computer');
+                },
                 child: Text('VS COM'),
                 color: Colors.greenAccent,
                 textColor: Colors.white,

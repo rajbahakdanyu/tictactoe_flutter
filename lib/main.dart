@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tictactoe/screens/game_screen.dart';
-import 'package:tictactoe/screens/selection_screen.dart';
-import 'package:tictactoe/screens/welcome_screen.dart';
+import 'package:tictactoe/route_generator.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,12 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Tic Tac Toe',
-      initialRoute: WelcomeScreen.id,
-      routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
-        GameScreen.id: (context) => GameScreen(),
-        SelectionScreen.id: (context) => SelectionScreen(),
-      },
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
