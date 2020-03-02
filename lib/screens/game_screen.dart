@@ -12,6 +12,36 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Row(),
+          ),
+          Expanded(
+            flex: 5,
+            child: Column(
+              children: <Widget>[
+                Row(),
+                Row(),
+                Row(),
+              ],
+            ),
+          ),
+          Expanded(
+            child: IconButton(
+              icon: Icon(
+                Icons.exit_to_app,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.popAndPushNamed(context, '/');
+              },
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
